@@ -1,0 +1,22 @@
+rm(list = ls())
+setwd("/home/shlee101/FLCCM/1_PrepData/")
+source("setup - packages.R")
+source("setup - parameters.R")
+source("setup - path.R")
+source("setup - func.R")
+
+source("Training/100 L data - construct maskedCDL.R")
+source("Training/101 L data - merge maskedCDL.R")
+source("Training/110 L data - compute base metrics.R")
+source("Training/111 L data - merge base metrics.R")
+source("Training/120 L data - add spatial metrics.R")
+source("Training/121 L data - merge spatial metrics.R")
+source("Training/130 L data - construct field-level soil.R")
+
+source("Training/K data - construct maskedCDL.R")
+source("Training/K data - add base, spatial ane soil metrics.R")
+
+source("Prediction/110 data - construct masked CDL.R")
+source("Prediction/111 data - merge masked CDL by year.R")
+source("Prediction/120 data - construct base mertrics by county and year.R")
+source("Prediction/130 data - construct spatial metrics by county, metrics and year.R")

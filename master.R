@@ -1,0 +1,40 @@
+# prep data -----------------
+rm(list = ls())
+setwd("/home/shlee101/FLCCM/1_PrepData/")
+source("setup - packages.R")
+source("setup - parameters.R")
+source("setup - path.R")
+source("setup - func.R")
+
+source("Training/100 L data - construct maskedCDL.R")
+source("Training/101 L data - merge maskedCDL.R")
+source("Training/110 L data - compute base metrics.R")
+source("Training/111 L data - merge base metrics.R")
+source("Training/120 L data - add spatial metrics.R")
+source("Training/121 L data - merge spatial metrics.R")
+source("Training/130 L data - construct field-level soil.R")
+
+source("Training/K data - construct maskedCDL.R")
+source("Training/K data - add base, spatial ane soil metrics.R")
+
+source("Prediction/110 data - construct masked CDL.R")
+source("Prediction/111 data - merge masked CDL by year.R")
+source("Prediction/120 data - construct base mertrics by county and year.R")
+source("Prediction/130 data - construct spatial metrics by county, metrics and year.R")
+
+#classification -----------------
+rm(list = ls())
+setwd("/home/shlee101/FLCCM/2_Classification/")
+source("setup - packages.R")
+
+source("Code/000 - construct data for RF.R")
+source("Code/100 - train crop1.R")
+source("Code/200 - train crop2.R")
+source("Code/300 - post processing+release.R")
+source("Code/301 - Figure4_6_7.R")
+source("Code/400 - kern.R")
+source("Code/401 - Figure8.R")
+source("Code/500 - Figure1_2_LandIQ2016.R")
+source("Code/500 - Figure3_example grape fields.R")
+source("Code/500 - Figure5_average total acre by crop and type.R")
+source("Code/500 - Figure9_acreage of crop123,NASS,CDFA.R")
